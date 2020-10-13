@@ -1,5 +1,7 @@
 # GoogleHotkeys
 
+[![GitHub Downloads](https://img.shields.io/github/downloads/VJ-Duardo/GoogleHotkeys/total)](https://github.com/VJ-Duardo/GoogleHotkeys/releases)
+
 This is a simple program I created for my father 2 years ago. It is probably one of the few things I made that are actually useful.  
 When pressing down the hotkey, any marked text (not limited to the browser) will be opened in google translate or as a search query in google search. 
 
