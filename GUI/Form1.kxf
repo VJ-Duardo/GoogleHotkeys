@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<object type="TAForm" name="translateScSettings">
+	<properties>
+		<property name="Left" vt="Int16">290</property>
+		<property name="Top" vt="Int16">353</property>
+		<property name="Width" vt="Int16">557</property>
+		<property name="Height" vt="Int16">322</property>
+		<property name="Caption" vt="String">GoogleHotkeys Settings</property>
+		<property name="Color" vt="Ident">clBtnFace</property>
+		<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+		<property name="Font.Color" vt="Ident">clWindowText</property>
+		<property name="Font.Height" vt="Int8">-11</property>
+		<property name="Font.Name" vt="String">MS Sans Serif</property>
+		<property name="Font.Style" vt="Set"/>
+		<property name="OldCreateOrder" vt="False">False</property>
+		<property name="Position" vt="Ident">poDesktopCenter</property>
+		<property name="Visible" vt="True">True</property>
+		<property name="Style" vt="Int32">-1798701056</property>
+		<property name="ExStyle" vt="Int16">256</property>
+		<property name="Version" vt="String">1.04</property>
+		<property name="FormOptOnEvent" vt="False">False</property>
+		<property name="FormOptExpVars" vt="False">False</property>
+		<property name="FormOptPopulate" vt="False">False</property>
+		<property name="FormOptVarsForSet" vt="False">False</property>
+		<property name="FormOptIndentChar" vt="Int8">0</property>
+		<property name="FormOptIndentCount" vt="Int8">1</property>
+		<property name="FormOptIndentInit" vt="Int8">0</property>
+		<property name="FormOptVarScope" vt="Int8">0</property>
+		<property name="Resizing" vt="Set"/>
+		<property name="PixelsPerInch" vt="Int8">96</property>
+		<property name="TextHeight" vt="Int8">13</property>
+	</properties>
+	<components>
+		<object type="TALabel" name="translateLabel">
+			<properties>
+				<property name="Left" vt="Int8">40</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">68</property>
+				<property name="Height" vt="Int8">20</property>
+				<property name="Caption" vt="String">Translator:</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-13</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">0</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="searchLabel">
+			<properties>
+				<property name="Left" vt="Int8">40</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">94</property>
+				<property name="Height" vt="Int8">20</property>
+				<property name="Caption" vt="String">Search engine:</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-13</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">1</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="ctrlComboBoxT">
+			<properties>
+				<property name="Left" vt="Int16">184</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">2</property>
+				<property name="Text" vt="String">ctrlComboBoxT</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="ctrlComboBoxS">
+			<properties>
+				<property name="Left" vt="Int16">184</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">3</property>
+				<property name="Text" vt="String">ctrlComboBoxS</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="plusLabel1T">
+			<properties>
+				<property name="Left" vt="Int16">256</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">13</property>
+				<property name="Height" vt="Int8">24</property>
+				<property name="Caption" vt="String">+</property>
+				<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-17</property>
+				<property name="Font.Name" vt="String">MS Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">4</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Description" vt="String">plusLabel1T</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="plusLabel1S">
+			<properties>
+				<property name="Left" vt="Int16">256</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">13</property>
+				<property name="Height" vt="Int8">24</property>
+				<property name="Caption" vt="String">+</property>
+				<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-17</property>
+				<property name="Font.Name" vt="String">MS Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">5</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Description" vt="String">plusLabel1S</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="shiftComboBoxT">
+			<properties>
+				<property name="Left" vt="Int16">272</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">6</property>
+				<property name="Text" vt="String">ctrlComboBoxTranslate</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="shiftComboBoxS">
+			<properties>
+				<property name="Left" vt="Int16">272</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">7</property>
+				<property name="Text" vt="String">ctrlComboBoxSearch</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="altComboBoxT">
+			<properties>
+				<property name="Left" vt="Int16">360</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">8</property>
+				<property name="Text" vt="String">ctrlComboBoxSearch</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="altComboBoxS">
+			<properties>
+				<property name="Left" vt="Int16">360</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">9</property>
+				<property name="Text" vt="String">ctrlComboBoxSearch</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="plusLabel2T">
+			<properties>
+				<property name="Left" vt="Int16">344</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">13</property>
+				<property name="Height" vt="Int8">24</property>
+				<property name="Caption" vt="String">+</property>
+				<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-17</property>
+				<property name="Font.Name" vt="String">MS Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">10</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Description" vt="String">plusLabel2T</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="plusLabel2S">
+			<properties>
+				<property name="Left" vt="Int16">344</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">13</property>
+				<property name="Height" vt="Int8">24</property>
+				<property name="Caption" vt="String">+</property>
+				<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-17</property>
+				<property name="Font.Name" vt="String">MS Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">11</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Description" vt="String">plusLabel2S</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="plusLabel3T">
+			<properties>
+				<property name="Left" vt="Int16">432</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">13</property>
+				<property name="Height" vt="Int8">24</property>
+				<property name="Caption" vt="String">+</property>
+				<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-17</property>
+				<property name="Font.Name" vt="String">MS Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">12</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Description" vt="String">plusLabel3T</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="plusLabel3S">
+			<properties>
+				<property name="Left" vt="Int16">432</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">13</property>
+				<property name="Height" vt="Int8">24</property>
+				<property name="Caption" vt="String">+</property>
+				<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-17</property>
+				<property name="Font.Name" vt="String">MS Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">13</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Description" vt="String">plusLabel3S</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="keyComboBoxT">
+			<properties>
+				<property name="Left" vt="Int16">448</property>
+				<property name="Top" vt="Int8">32</property>
+				<property name="Width" vt="Int8">49</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">14</property>
+				<property name="Text" vt="String">keyComboBoxT</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="keyComboBoxS">
+			<properties>
+				<property name="Left" vt="Int16">448</property>
+				<property name="Top" vt="Int8">120</property>
+				<property name="Width" vt="Int8">49</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">15</property>
+				<property name="Text" vt="String">ctrlComboBoxSearch</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="languageLabel">
+			<properties>
+				<property name="Left" vt="Int8">40</property>
+				<property name="Top" vt="Int8">64</property>
+				<property name="Width" vt="Int8">111</property>
+				<property name="Height" vt="Int8">20</property>
+				<property name="Caption" vt="String">Target Language:</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-13</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">16</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACombo" name="languageComboBox">
+			<properties>
+				<property name="Left" vt="Int16">184</property>
+				<property name="Top" vt="Int8">64</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="ItemHeight" vt="Int8">13</property>
+				<property name="TabOrder" vt="Int8">17</property>
+				<property name="Text" vt="String">languageComboBox</property>
+				<property name="CtrlStyle" vt="Int32">1342374466</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+				<property name="Description" vt="String">languageComboBox</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAButton" name="cancelButton">
+			<properties>
+				<property name="Left" vt="Int16">368</property>
+				<property name="Top" vt="Int16">232</property>
+				<property name="Width" vt="Int8">91</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="Caption" vt="String">Cancel</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-13</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">18</property>
+				<property name="Color" vt="Ident">clBtnFace</property>
+				<property name="CtrlStyle" vt="Int32">1342373888</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockWidth, DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAButton" name="okButton">
+			<properties>
+				<property name="Left" vt="Int8">40</property>
+				<property name="Top" vt="Int16">240</property>
+				<property name="Width" vt="Int8">91</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="Caption" vt="String">OK</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-13</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">19</property>
+				<property name="Color" vt="Ident">clBtnFace</property>
+				<property name="CtrlStyle" vt="Int32">1342373888</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockWidth, DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="Checkbox1">
+			<properties>
+				<property name="Left" vt="Int8">40</property>
+				<property name="Top" vt="Int16">176</property>
+				<property name="Width" vt="Int16">265</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">Autostart</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-13</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set"/>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">20</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TALabel" name="versionLabel">
+			<properties>
+				<property name="Left" vt="Int16">456</property>
+				<property name="Top" vt="Int8">8</property>
+				<property name="Width" vt="Int8">65</property>
+				<property name="Height" vt="Int8">19</property>
+				<property name="Caption" vt="String">Version 0.3</property>
+				<property name="Font.Charset" vt="Ident">ANSI_CHARSET</property>
+				<property name="Font.Color" vt="Ident">clWindowText</property>
+				<property name="Font.Height" vt="Int8">-12</property>
+				<property name="Font.Name" vt="String">Microsoft Sans Serif</property>
+				<property name="Font.Style" vt="Set">fsItalic</property>
+				<property name="ParentFont" vt="False">False</property>
+				<property name="TabOrder" vt="Int8">21</property>
+				<property name="HaveVariable" vt="False">False</property>
+				<property name="CtrlStyle" vt="Int32">1342308608</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set"/>
+			</properties>
+			<components/>
+		</object>
+	</components>
+</object>
