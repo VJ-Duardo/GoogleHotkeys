@@ -49,12 +49,12 @@ Call("_ReverseDictionary", $oHotkeyDic)
 
 
 ;Translate/Search rows-----------------------------------------------------------------------------------------
-$hGSSettingsGui = GUICreate("GoogleShortcuts Settings", 542, 284, -1, -1)
+$hGSSettingsGui = GUICreate($eProgramName & " Settings", 542, 284, -1, -1)
 
 $idTranslateLabel = GUICtrlCreateLabel("Translator:", 40, 32, 76, 20)
 GUICtrlSetFont(-1, 10, 400, 0, "Microsoft Sans Serif")
 
-$searchLabel = GUICtrlCreateLabel("Search engine:", 40, 120, 98, 20)
+$searchLabel = GUICtrlCreateLabel("Search Engine:", 40, 120, 98, 20)
 GUICtrlSetFont(-1, 10, 400, 0, "Microsoft Sans Serif")
 
 Local Const $iRowOffset = 88
@@ -68,7 +68,7 @@ _CreateSelectionRow($aSearchComboStart, $aSearchPlusStart, $iRowOffset, $aSearch
 
 
 ;Language------------------------------------------------------------------------------------------------------
-$idLanguageLabel = GUICtrlCreateLabel("Target language:", 40, 64, 150, 20)
+$idLanguageLabel = GUICtrlCreateLabel("Target Language:", 40, 64, 150, 20)
 GUICtrlSetFont(-1, 10, 400, 0, "Microsoft Sans Serif")
 
 $idLanguageComboBox = GUICtrlCreateCombo("", 184, 64, 65, 25, BitOR($CBS_DROPDOWNLIST,$CBS_AUTOHSCROLL))
