@@ -2,7 +2,7 @@
 #include <FileConstants.au3>
 #include <GUIConstantsEx.au3>
 
-;Version: 0.3.4 AutoIt: v3.3.14.5
+;Version: 0.3.5 AutoIt: v3.3.14.5
 ;Author: VJ-Duardo(GitHub)
 
 Global Const $eProgramName = "GoogleHotkeys"
@@ -27,7 +27,7 @@ $oURLEscapeDic.Add("[", "%5B")
 $oURLEscapeDic.Add("]", "%5D")
 $oURLEscapeDic.Add("{", "%7B")
 $oURLEscapeDic.Add("}", "%7D")
-$oURLEscapeDic.Add("“", "%22")
+$oURLEscapeDic.Add('"', "%22")
 $oURLEscapeDic.Add("+", "%2B")
 $oURLEscapeDic.Add("#", "%23")
 $oURLEscapeDic.Add("@", "%40")

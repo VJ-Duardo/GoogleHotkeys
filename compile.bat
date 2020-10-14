@@ -1,4 +1,4 @@
-set dir_name="GoogleHotkeys-0.3.4"
+set dir_name="GoogleHotkeys-0.3.5"
 
 set au3exe_path="D:\Programme\AutoIt3\SciTE\..\AutoIt3.exe"
 set au3wr_path="D:\Programme\AutoIt3\SciTE\AutoIt3Wrapper\AutoIt3Wrapper.au3"
