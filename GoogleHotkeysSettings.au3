@@ -71,8 +71,8 @@ _CreateSelectionRow($aSearchComboStart, $aSearchPlusStart, $iRowOffset, $aSearch
 $idLanguageLabel = GUICtrlCreateLabel("Target Language:", 40, 64, 150, 20)
 GUICtrlSetFont(-1, 10, 400, 0, "Microsoft Sans Serif")
 
-$idLanguageComboBox = GUICtrlCreateCombo("", 184, 64, 65, 25, BitOR($CBS_DROPDOWNLIST,$CBS_AUTOHSCROLL))
-GUICtrlSetData($idLanguageComboBox, "DE|RU|EN|FR|ES|DA|IT|PL|PT|SV|TR|UK|EL")
+$idLanguageComboBox = GUICtrlCreateCombo("", 184, 64, 65, 25, BitOR($CBS_DROPDOWNLIST,$WS_VSCROLL))
+GUICtrlSetData($idLanguageComboBox, $eAllLanguages)
 
 
 ;Buttons---------------------------------------------------------------------------------------------------
@@ -170,7 +170,14 @@ Func _WriteDataToFile()
 	EndIf
 	FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aTranslateCombos))
 	FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aSearchCombos))
-	FileWriteLine($hDataFile, StringLower(GUICtrlRead($idLanguageComboBox)))
+	Local $sLanguageSelection = ""
+	If StringInStr(GUICtrlRead($idLanguageComboBox), "-") <> 0 Then
+		Local $sStringParts = StringSplit(GUICtrlRead($idLanguageComboBox), "-")
+		$sLanguageSelection = StringLower($sStringParts[0]) & "-" & StringUpper($sStringParts[1])
+	Else
+		$sLanguageSelection = GUICtrlRead($idLanguageComboBox)
+	EndIf
+	FileWriteLine($hDataFile, $sLanguageSelection)
 	FileWriteLine($hDataFile, GUICtrlRead($idAutostartCheckbox))
 	FileClose($hDataFile)
 EndFunc

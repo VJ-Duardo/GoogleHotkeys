@@ -14,6 +14,8 @@ Global Const $eSearchKeyDefault = "^,+,$,y"
 Global Const $eTranslateLanguageDefault = "de"
 Global Const $eAutoStartSetting = $GUI_UNCHECKED
 
+Global Const $eAllLanguages = "AF|AM|AR|AZ|BE|BG|BN|BS|CA|CO|CS|CY|DA|DE|EL|EN|EO|ES|ET|EU|FA|FI|FR|FY|GA|GAA|GD|GL|GU|HA|HAW|HI|HR|HT|HU|HY|ID|IG|IS|IT|IW|JA|JW|KA|KK|KM|KN|KO|KU|KY|LA|LN|LO|LT|LV|MG|MI|MK|ML|MN|MR|MS|MT|NE|NL|NO|NY|NYN|OR|PA|PL|PS|PT|RM|RO|RU|RW|SD|SH|SI|SK|SL|SN|SO|SQ|SR|ST|SU|SV|SW|TA|TE|TG|TH|TK|TL|TR|TT|UG|UK|UR|UZ|VI|XH|YI|YO|ZH-CN|ZH-TW|ZU"
+
 Global $oURLEscapeDic = ObjCreate("Scripting.Dictionary")
 $oURLEscapeDic.Add("%", "%25")
 $oURLEscapeDic.Add(" ", "%20")
