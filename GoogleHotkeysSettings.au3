@@ -170,13 +170,15 @@ Func _WriteDataToFile()
 	EndIf
 	FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aTranslateCombos))
 	FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aSearchCombos))
+
 	Local $sLanguageSelection = ""
 	If StringInStr(GUICtrlRead($idLanguageComboBox), "-") <> 0 Then
-		Local $sStringParts = StringSplit(GUICtrlRead($idLanguageComboBox), "-")
+		Local $sStringParts = StringSplit(GUICtrlRead($idLanguageComboBox), "-", $STR_NOCOUNT)
 		$sLanguageSelection = StringLower($sStringParts[0]) & "-" & StringUpper($sStringParts[1])
 	Else
 		$sLanguageSelection = GUICtrlRead($idLanguageComboBox)
 	EndIf
+
 	FileWriteLine($hDataFile, $sLanguageSelection)
 	FileWriteLine($hDataFile, GUICtrlRead($idAutostartCheckbox))
 	FileClose($hDataFile)
