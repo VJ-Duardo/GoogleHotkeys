@@ -176,7 +176,7 @@ Func _WriteDataToFile()
 		Local $sStringParts = StringSplit(GUICtrlRead($idLanguageComboBox), "-", $STR_NOCOUNT)
 		$sLanguageSelection = StringLower($sStringParts[0]) & "-" & StringUpper($sStringParts[1])
 	Else
-		$sLanguageSelection = GUICtrlRead($idLanguageComboBox)
+		$sLanguageSelection = StringLower(GUICtrlRead($idLanguageComboBox))
 	EndIf
 
 	FileWriteLine($hDataFile, $sLanguageSelection)
