@@ -2,7 +2,7 @@
 #include <FileConstants.au3>
 #include <GUIConstantsEx.au3>
 
-;Version: 0.3.5 AutoIt: v3.3.14.5
+;Version: 0.3.6 AutoIt: v3.3.14.5
 ;Author: VJ-Duardo(GitHub)
 
 Global Const $eProgramName = "GoogleHotkeys"
