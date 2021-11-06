@@ -7,7 +7,7 @@
 
 Global Const $eProgramName = "GoogleHotkeys"
 
-Global Const $eSettingsFilename = "settings.txt"
+Global Const $eSettingsFilename = @ScriptDir & "/settings.txt"
 
 Global Const $eTranslateKeyDefault = "^,+,$,q"
 Global Const $eSearchKeyDefault = "^,+,$,y"
