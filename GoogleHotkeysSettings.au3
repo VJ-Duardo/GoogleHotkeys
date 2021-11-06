@@ -95,24 +95,24 @@ GUICtrlSetState($eVersionLabel, $GUI_DISABLE)
 
 
 Func _CreateSelectionRow($aStart, $aStartPlus, $iOffset, ByRef $aComboArray)
-	Local $aComboContent[4] = [" |Ctrl", " |Shift", " |Alt", "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|0|1|2|3|4|5|6|7|8|9|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12"]
-	For $i = 0 To 2
-		$idComboBox = GUICtrlCreateCombo("", $aStart[0], $aStart[1], $aStart[2], $aStart[3], BitOR($CBS_DROPDOWNLIST,$CBS_AUTOHSCROLL))
-		GUICtrlSetData($idComboBox, $aComboContent[$i])
-		$aComboArray[$i] = $idComboBox
-		$aStart[0]+= $iOffset
-	Next
+  Local $aComboContent[4] = [" |Ctrl", " |Shift", " |Alt", "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|0|1|2|3|4|5|6|7|8|9|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12"]
+  For $i = 0 To 2
+    $idComboBox = GUICtrlCreateCombo("", $aStart[0], $aStart[1], $aStart[2], $aStart[3], BitOR($CBS_DROPDOWNLIST,$CBS_AUTOHSCROLL))
+    GUICtrlSetData($idComboBox, $aComboContent[$i])
+    $aComboArray[$i] = $idComboBox
+    $aStart[0]+= $iOffset
+  Next
 
-	Local const $iKeySizeChange = 16
-	$idKeyComboBox = GUICtrlCreateCombo("", $aStart[0], $aStart[1], $aStart[2]-$iKeySizeChange, $aStart[3], BitOR($CBS_DROPDOWNLIST,$WS_VSCROLL))
-	GUICtrlSetData($idKeyComboBox, $aComboContent[3])
-	$aComboArray[3] = $idKeyComboBox
+  Local const $iKeySizeChange = 16
+  $idKeyComboBox = GUICtrlCreateCombo("", $aStart[0], $aStart[1], $aStart[2]-$iKeySizeChange, $aStart[3], BitOR($CBS_DROPDOWNLIST,$WS_VSCROLL))
+  GUICtrlSetData($idKeyComboBox, $aComboContent[3])
+  $aComboArray[3] = $idKeyComboBox
 
-	For $j = 0 To 2
-		$idPlusLabel = GUICtrlCreateLabel("+", $aStartPlus[0], $aStartPlus[1], $aStartPlus[2], $aStartPlus[3])
-		GUICtrlSetFont(-1, 13, 400, 0, "MS Sans Serif")
-		$aStartPlus[0]+= $iOffset
-	Next
+  For $j = 0 To 2
+    $idPlusLabel = GUICtrlCreateLabel("+", $aStartPlus[0], $aStartPlus[1], $aStartPlus[2], $aStartPlus[3])
+    GUICtrlSetFont(-1, 13, 400, 0, "MS Sans Serif")
+    $aStartPlus[0]+= $iOffset
+  Next
 EndFunc
 
 GUISetState(@SW_SHOW)
@@ -122,157 +122,152 @@ GUISetState(@SW_SHOW)
 
 
 Func _ReadDataFile()
-	$hDataFile = FileOpen($eSettingsFilename, $FO_READ)
-    If Call("_SaveFileCheck") == True Then
-		$hDataFile = FileOpen($eSettingsFilename, $FO_READ)
-	Else
-		MsgBox($MB_SYSTEMMODAL, "", "There is an issue with the save file.")
-		Exit
-	EndIf
-	_SetValuesInGUI()
-	FileClose($hDataFile)
+  $hDataFile = FileOpen($eSettingsFilename, $FO_READ)
+  If Call("_SaveFileCheck") == True Then
+    $hDataFile = FileOpen($eSettingsFilename, $FO_READ)
+  Else
+    MsgBox($MB_SYSTEMMODAL, "", "There is an issue with the save file.")
+    Exit
+  EndIf
+  _SetValuesInGUI()
+  FileClose($hDataFile)
 EndFunc
 
 
 
 Func _SetValuesInGUI()
-	Local $aHotkey = StringSplit(FileReadLine($hDataFile, 1), ",", $STR_NOCOUNT)
-	Call("_SetComboBoxes", $aTranslateCombos, $aHotkey)
+  Local $aHotkey = StringSplit(FileReadLine($hDataFile, 1), ",", $STR_NOCOUNT)
+  Call("_SetComboBoxes", $aTranslateCombos, $aHotkey)
 
-	$aHotkey = StringSplit(FileReadLine($hDataFile, 2), ",", $STR_NOCOUNT)
-	Call("_SetComboBoxes", $aSearchCombos, $aHotkey)
+  $aHotkey = StringSplit(FileReadLine($hDataFile, 2), ",", $STR_NOCOUNT)
+  Call("_SetComboBoxes", $aSearchCombos, $aHotkey)
 
-	_GUICtrlComboBox_SelectString($idLanguageComboBox, FileReadLine($hDataFile, 3))
+  _GUICtrlComboBox_SelectString($idLanguageComboBox, FileReadLine($hDataFile, 3))
 
-	for $i =0 To (UBound($aFileConentOnStart))-1
-		$aFileConentOnStart[$i] = FileReadLine($hDataFile, $i+1)
-	Next
+  for $i =0 To (UBound($aFileConentOnStart))-1
+    $aFileConentOnStart[$i] = FileReadLine($hDataFile, $i+1)
+  Next
 
-	GUICtrlSetState($idAutostartCheckbox, FileReadLine($hDataFile, 4))
+  GUICtrlSetState($idAutostartCheckbox, FileReadLine($hDataFile, 4))
 EndFunc
 
 
 Func _SetComboBoxes($aComboArray, $aHotkeyArray)
-	For $i = 0 To 2 Step +1
-		_GUICtrlComboBox_SelectString($aComboArray[$i], $oHotkeyDic.Item($aHotkeyArray[$i]))
-	Next
-	_GUICtrlComboBox_SelectString($aComboArray[3], StringRegExpReplace($aHotkeyArray[3], "[{}]", ""))
+  For $i = 0 To 2 Step +1
+    _GUICtrlComboBox_SelectString($aComboArray[$i], $oHotkeyDic.Item($aHotkeyArray[$i]))
+  Next
+  _GUICtrlComboBox_SelectString($aComboArray[3], StringRegExpReplace($aHotkeyArray[3], "[{}]", ""))
 EndFunc
 
 
 
 Func _WriteDataToFile()
-	If Call("_SaveFileCheck") == True Then
-		$hDataFile = FileOpen($eSettingsFilename, $FO_OVERWRITE)
-	Else
-		MsgBox($MB_SYSTEMMODAL, "", "There is an issue with the save file. It is possible the changes did not get saved.")
-		Return
-	EndIf
-	FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aTranslateCombos))
-	FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aSearchCombos))
+  If Call("_SaveFileCheck") == True Then
+    $hDataFile = FileOpen($eSettingsFilename, $FO_OVERWRITE)
+  Else
+    MsgBox($MB_SYSTEMMODAL, "", "There is an issue with the save file. It is possible the changes did not get saved.")
+    Return
+  EndIf
+  FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aTranslateCombos))
+  FileWriteLine($hDataFile, Call("_GetHotKeyFromGUI", $aSearchCombos))
 
-	Local $sLanguageSelection = ""
-	If StringInStr(GUICtrlRead($idLanguageComboBox), "-") <> 0 Then
-		Local $sStringParts = StringSplit(GUICtrlRead($idLanguageComboBox), "-", $STR_NOCOUNT)
-		$sLanguageSelection = StringLower($sStringParts[0]) & "-" & StringUpper($sStringParts[1])
-	Else
-		$sLanguageSelection = StringLower(GUICtrlRead($idLanguageComboBox))
-	EndIf
+  Local $sLanguageSelection = ""
+  If StringInStr(GUICtrlRead($idLanguageComboBox), "-") <> 0 Then
+    Local $sStringParts = StringSplit(GUICtrlRead($idLanguageComboBox), "-", $STR_NOCOUNT)
+    $sLanguageSelection = StringLower($sStringParts[0]) & "-" & StringUpper($sStringParts[1])
+  Else
+    $sLanguageSelection = StringLower(GUICtrlRead($idLanguageComboBox))
+  EndIf
 
-	FileWriteLine($hDataFile, $sLanguageSelection)
-	FileWriteLine($hDataFile, GUICtrlRead($idAutostartCheckbox))
-	FileClose($hDataFile)
+  FileWriteLine($hDataFile, $sLanguageSelection)
+  FileWriteLine($hDataFile, GUICtrlRead($idAutostartCheckbox))
+  FileClose($hDataFile)
 EndFunc
 
 
 Func _GetHotKeyFromGUI($aComboArray)
-	Local $sHotkeyString = ""
-	For $i = 0 To UBound($aComboArray)-2 Step +1
-		$sHotkeyString = $sHotkeyString & $oHotkeyDic.Item(GUICtrlRead($aComboArray[$i])) & ","
-	Next
-	if StringLeft(GUICtrlRead($aComboArray[3]), 1) == "F" Then
-		$sHotkeyString = $sHotkeyString & "{" & GUICtrlRead($aComboArray[3]) & "}"
-	Else
-		$sHotkeyString = $sHotkeyString & GUICtrlRead($aComboArray[3])
-	EndIf
-	Return $sHotkeyString
+  Local $sHotkeyString = ""
+  For $i = 0 To UBound($aComboArray)-2 Step +1
+    $sHotkeyString = $sHotkeyString & $oHotkeyDic.Item(GUICtrlRead($aComboArray[$i])) & ","
+  Next
+  if StringLeft(GUICtrlRead($aComboArray[3]), 1) == "F" Then
+    $sHotkeyString = $sHotkeyString & "{" & GUICtrlRead($aComboArray[3]) & "}"
+  Else
+    $sHotkeyString = $sHotkeyString & GUICtrlRead($aComboArray[3])
+  EndIf
+  Return $sHotkeyString
 EndFunc
 
 
 
 Func _GetAutostartFolderState()
-	if FileExists($eFullAutostartDir & ".lnk") == 1 Then
-		Return True
-	Else
-		Return False
-	EndIf
+  Return (FileExists($eFullAutostartDir & ".lnk") == 1)
 EndFunc
 
 
 Func _SetAutostartFolder()
-	If GUICtrlRead($idAutostartCheckbox) == $GUI_CHECKED Then
-		If Call("_GetAutostartFolderState") == False Then
-			FileCreateShortcut(@WorkingDir & "\" & $eProgramName&".exe", $eFullAutostartDir, @WorkingDir)
-		EndIf
-	Else
-		If Call("_GetAutostartFolderState") == True Then
-			ConsoleWrite($eFullAutostartDir & ".lnk")
-			FileDelete($eFullAutostartDir & ".lnk")
-		EndIf
-	EndIf
+  If GUICtrlRead($idAutostartCheckbox) == $GUI_CHECKED Then
+    If Call("_GetAutostartFolderState") == False Then
+      FileCreateShortcut(@WorkingDir & "\" & $eProgramName&".exe", $eFullAutostartDir, @WorkingDir)
+    EndIf
+  Else
+    If Call("_GetAutostartFolderState") == True Then
+      FileDelete($eFullAutostartDir & ".lnk")
+    EndIf
+  EndIf
 EndFunc
 
 
 
 Func _CheckForSettingChanges()
-	If Call("_SaveFileCheck") == True Then
-		$hDataFile = FileOpen($eSettingsFilename, $FO_READ)
-	Else
-		MsgBox($MB_SYSTEMMODAL, "", "There is an issue with the save file.")
-		Exit
-	EndIf
-	for $i =0 To (UBound($aFileConentOnStart)) -1
-		If $aFileConentOnStart[$i] <> FileReadLine($hDataFile, $i +1) Then
-			FileClose($hDataFile)
-			Return True
-		EndIf
-	Next
-	FileClose($hDataFile)
+  If Call("_SaveFileCheck") == True Then
+    $hDataFile = FileOpen($eSettingsFilename, $FO_READ)
+  Else
+    MsgBox($MB_SYSTEMMODAL, "", "There is an issue with the save file.")
+    Exit
+  EndIf
+  for $i =0 To (UBound($aFileConentOnStart)) -1
+    If $aFileConentOnStart[$i] <> FileReadLine($hDataFile, $i +1) Then
+      FileClose($hDataFile)
+      Return True
+    EndIf
+  Next
+  FileClose($hDataFile)
 EndFunc
 
 
 
 Func _RestartMainScript()
-	If _CheckForSettingChanges() == True Then
-		If ProcessExists($eProgramName&".exe") Then
-			ProcessClose($eProgramName&".exe")
-			Run($eProgramName&".exe restart")
-		EndIf
-	EndIf
+  If _CheckForSettingChanges() == True Then
+    If ProcessExists($eProgramName&".exe") Then
+      ProcessClose($eProgramName&".exe")
+      Run($eProgramName&".exe restart")
+    EndIf
+  EndIf
 EndFunc
 
 
 
 Func _ReverseDictionary($dic)
-	for $i = 0 To ($dic.Count)-1 Step +1
-		$dic.Add($dic.Items[$i], $dic.Keys[$i])
-	Next
+  for $i = 0 To ($dic.Count)-1 Step +1
+    $dic.Add($dic.Items[$i], $dic.Keys[$i])
+  Next
 EndFunc
 
 
 
 _ReadDataFile()
 While 1
-	$nMsg = GUIGetMsg()
-	Switch $nMsg
-		Case $GUI_EVENT_CLOSE
-			Exit
-		Case $idCancelButton
-			Exit
-		Case $idOkButton
-			_WriteDataToFile()
-			_SetAutostartFolder()
-			_RestartMainScript()
-			Exit
-	EndSwitch
+  $nMsg = GUIGetMsg()
+  Switch $nMsg
+    Case $GUI_EVENT_CLOSE
+      Exit
+    Case $idCancelButton
+      Exit
+    Case $idOkButton
+      _WriteDataToFile()
+      _SetAutostartFolder()
+      _RestartMainScript()
+      Exit
+  EndSwitch
 WEnd

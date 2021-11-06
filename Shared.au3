@@ -47,24 +47,24 @@ $oURLEscapeDic.Add(",", "%2C")
 
 
 Func _SaveFileCheck($bSecondTry = False)
-	Local $hSaveFile = FileOpen($eSettingsFilename, $FO_READ)
-	If $hSaveFile = -1 Then
-		If $bSecondTry == False Then
-			_CreateNewSaveFile()
-			Return _SaveFileCheck(True)
-		Else
-			Return False
-		Endif
-	EndIf
-	Return True
+  Local $hSaveFile = FileOpen($eSettingsFilename, $FO_READ)
+  If $hSaveFile = -1 Then
+    If $bSecondTry == False Then
+      _CreateNewSaveFile()
+      Return _SaveFileCheck(True)
+    Else
+      Return False
+    Endif
+  EndIf
+  Return True
 EndFunc
 
 
 Func _CreateNewSaveFile()
-	Local $hNewFile = FileOpen($eSettingsFilename, $FO_OVERWRITE)
-	FileWriteLine($hNewFile, $eTranslateKeyDefault)
-	FileWriteLine($hNewFile, $eSearchKeyDefault)
-	FileWriteLine($hNewFile, $eTranslateLanguageDefault)
-	FileWrite($hNewFile, $eAutoStartSetting)
-	FileClose($hNewFile)
+  Local $hNewFile = FileOpen($eSettingsFilename, $FO_OVERWRITE)
+  FileWriteLine($hNewFile, $eTranslateKeyDefault)
+  FileWriteLine($hNewFile, $eSearchKeyDefault)
+  FileWriteLine($hNewFile, $eTranslateLanguageDefault)
+  FileWrite($hNewFile, $eAutoStartSetting)
+  FileClose($hNewFile)
 EndFunc
