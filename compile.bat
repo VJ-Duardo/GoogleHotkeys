@@ -1,8 +1,8 @@
 set dir_name="GoogleHotkeys-0.3.5"
 
-set au3exe_path="D:\Programme\AutoIt3\SciTE\..\AutoIt3.exe"
-set au3wr_path="D:\Programme\AutoIt3\SciTE\AutoIt3Wrapper\AutoIt3Wrapper.au3"
-set au2ex_path="D:\Programme\AutoIt3\Aut2Exe\Aut2Exe.exe"
+set au3exe_path="C:\Program Files (x86)\AutoIt3\AutoIt3.exe"
+set au3wr_path="C:\Program Files (x86)\AutoIt3\SciTE\AutoIt3Wrapper\AutoIt3Wrapper.au3"
+set au2ex_path="C:\Program Files (x86)\AutoIt3\Aut2Exe\Aut2exe.exe"
 
 
 if not exist %dir_name% (
