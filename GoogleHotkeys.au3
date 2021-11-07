@@ -71,7 +71,7 @@ Func _UseMarkedText($sLink)
   Local $vClipboard = ClipGet()
   ClipPut("")
 
-  While _IsPressed("11") or _IsPressed("10")
+  While _IsPressed("11") or _IsPressed("10") or _IsPressed("12")
     sleep(1)
   WEnd
   Send("^c")
