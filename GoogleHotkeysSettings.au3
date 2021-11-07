@@ -1,9 +1,9 @@
 #AutoIt3Wrapper_Icon=icons\ghSettings.ico
-#AutoIt3Wrapper_Outfile_x64=GoogleHotkeys-0.3.6\GoogleHotkeys Settings.exe
+#AutoIt3Wrapper_Outfile_x64=GoogleHotkeys-0.3.7\GoogleHotkeys Settings.exe
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=GoogleHotkeys: Settings Application
 #AutoIt3Wrapper_Res_ProductName=GoogleHotkeys Settings
-#AutoIt3Wrapper_Res_ProductVersion=0.3.6
+#AutoIt3Wrapper_Res_ProductVersion=0.3.7
 #AutoIt3Wrapper_Res_LegalCopyright=VJ-Duardo
 
 
@@ -21,13 +21,13 @@
 
 #include <Shared.au3>
 
-;Version: 0.3.6 AutoIt: v3.3.14.5
+;AutoIt: v3.3.14.5
 ;Author: VJ-Duardo(GitHub)
 
 _Singleton(@ScriptName)
 
 
-Global Const $eVersion = "0.3.6"
+Global Const $eVersion = "0.3.7"
 
 Global $hDataFile = 0
 
