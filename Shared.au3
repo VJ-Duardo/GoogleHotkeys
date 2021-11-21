@@ -3,7 +3,7 @@
 #include <GUIConstantsEx.au3>
 
 ;AutoIt: v3.3.14.5
-;Author: VJ-Duardo(GitHub)
+;Author: VJ-Duardo
 
 Global Const $eProgramName = "GoogleHotkeys"
 

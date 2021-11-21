@@ -1,9 +1,9 @@
 #AutoIt3Wrapper_Icon=icons\ghSettings.ico
-#AutoIt3Wrapper_Outfile_x64=GoogleHotkeys-0.3.7\GoogleHotkeys Settings.exe
+#AutoIt3Wrapper_Outfile_x64=GoogleHotkeys-0.4.0\GoogleHotkeys Settings.exe
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Description=GoogleHotkeys: Settings Application
 #AutoIt3Wrapper_Res_ProductName=GoogleHotkeys Settings
-#AutoIt3Wrapper_Res_ProductVersion=0.3.7
+#AutoIt3Wrapper_Res_ProductVersion=0.4.0
 #AutoIt3Wrapper_Res_LegalCopyright=VJ-Duardo
 
 
@@ -22,12 +22,12 @@
 #include <Shared.au3>
 
 ;AutoIt: v3.3.14.5
-;Author: VJ-Duardo(GitHub)
+;Author: VJ-Duardo
 
 _Singleton(@ScriptName)
 
 
-Global Const $eVersion = "0.3.7"
+Global Const $eVersion = "0.4.0"
 
 Global $hDataFile = 0
 
@@ -35,9 +35,9 @@ Global $aFileConentOnStart[3]
 Global $aTranslateCombos[4]
 Global $aSearchCombos[4]
 
-Global Const $eAutostartDirectory = "C:\Users\" & @UserName & "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+Global Const $eRunDir = @WorkingDir & "\" & $eProgramName&".exe"
 Global Const $eSettingsFilenameExeShortcut = $eProgramName & "_V"
-Global Const $eFullAutostartDir = $eAutostartDirectory & "\" & $eSettingsFilenameExeShortcut
+Global Const $eFullAutostartDir = @StartupDir & "\" & $eSettingsFilenameExeShortcut
 
 Global $oHotkeyDic = ObjCreate("Scripting.Dictionary")
 $oHotkeyDic.Add("^", "Ctrl")
@@ -200,20 +200,14 @@ EndFunc
 
 
 
-Func _GetAutostartFolderState()
-  Return (FileExists($eFullAutostartDir & ".lnk") == 1)
-EndFunc
-
-
 Func _SetAutostartFolder()
+  Local Const $eShortcutFilename = $eFullAutostartDir & ".lnk"
   If GUICtrlRead($idAutostartCheckbox) == $GUI_CHECKED Then
-    If Call("_GetAutostartFolderState") == False Then
-      FileCreateShortcut(@WorkingDir & "\" & $eProgramName&".exe", $eFullAutostartDir, @WorkingDir)
+    If (FileExists($eShortcutFilename) == 0) or (FileGetShortcut($eShortcutFilename)[0] <> $eRunDir) Then
+      FileCreateShortcut($eRunDir, $eFullAutostartDir, @WorkingDir)
     EndIf
   Else
-    If Call("_GetAutostartFolderState") == True Then
-      FileDelete($eFullAutostartDir & ".lnk")
-    EndIf
+    FileDelete($eShortcutFilename)
   EndIf
 EndFunc
 
